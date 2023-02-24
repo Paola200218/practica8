@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Ejemplo de HTML5">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript">
+  <meta http‐equiv="refresh" content="20;URL=./2PantillaBasica.htm" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divisones Sem&aacute;ticas</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" >
+  <link rel="stylesheet" type="text/css" href="css/estiloBasico.css">
+
+</head>
+<style>
+  * {
+margin: 0px;
+padding: 0px;
+}
+h1 {
+font: bold 20px verdana, sans-serif;
+} h2 {
+font: bold 14px verdana, sans-serif;
+}
+
+/*para asegurarnos de que serán tratados como regularmente
+se hace con elementos <div> y de este modo construir
+el modelo de caja*/
+header, section, footer, aside, nav, article, figure, figcaption,
+hgroup{
+display: block;
+}
+/*Centrando el cuerpo*/
+body {
+text-align: center;
+/*background-image: url("paper.gif");*/
+/*background-color: lightblue;*/
+}
+/*Definiendo las propiedades de la caja principal*/
+#agrupar {
+width: 960px;
+margin: 15px auto;
+text-align: left;
+}
+/* Agregando estilos para <header>.*/
+#cabecera {
+background: #f2c7f8;
+border: 1px solid #f1eaea;
+padding: 20px;
+
+}
+/*Agregando estilos para <nav>.*/
+#menu {
+background: #CCCCCC;
+padding: 5px 15px;
+}
+#menu li {
+display: inline-block;
+list-style: none; /*list-style: square inside url("sqpurple.gif");*/
+padding: 5px;
+font: bold 14px verdana, sans-serif;
+}
+/*Section y aside*/
+/*La propiedad flotante especifica cómo debe flotar un elemento.
+Nota: ¡Los elementos absolutamente posicionados ignoran
+la propiedad de flotación!
+Nota: los elementos después de un elemento flotante fluirán a su alrededor.
+Para evitar esto, use la propiedad clear o el clearfix hack
+*/
+#seccion {
+float: right;
+width: 660px;
+margin: 20px;
+}
+
+#columna {
+float: left;
+width: 220px;
+height: 2095px;
+margin: 20px 0px;
+padding: 20px;
+background: #CCCCCC;
+}
+/*Footer*/
+#pie {
+clear: both;/* No permita elementos flotantes en el lado izquierdo
+                o derecho de un elemento <p> especificado:*/
+text-align: center;
+padding: 20px;
+border-top: 2px solid #b2dfe6;
+}
+/*imagenes*/
+#imagen{
+  width: 20%;
+  height: 20%;
+}
+
+#imagen2{
+  width: 15%;
+  height: 10%;
+}
+
+/*Agregando los últimos toques a nuestro diseño básico.*/
+article {
+background: #ebbaf1;
+border: 1px solid #c9b4fa;
+padding: 20px;
+margin-bottom: 15px;
+}
+
+article footer {
+text-align: right;
+}
+
+img{
+  width: 30%;
+  height: 35%;
+}
+
+time {
+color: #aee2e6;
+}
+
+figcaption {
+font: italic 14px verdana, sans-serif;
+}
+
+l{
+  font-family:'Times New Roman', Times, serif ;
+  color: rgb(255, 255, 255);
+}
+
+f{
+  font-family:'Times New Roman', Times, serif ;
+  color:rgb(0, 255, 34);
+}
+
+h{
+  font-family:'Times New Roman', Times, serif ;
+  color:rgb(255, 174, 0);
+}
+
+c{
+  font-family:'Times New Roman', Times, serif ;
+  color:rgb(132, 0, 240);
+}
+
+d{
+  font-family:'Times New Roman', Times, serif ;
+  color:aqua;
+}
+
+e{
+  font-family:'Times New Roman', Times, serif ;
+  color:rgb(0, 47, 255);
+}
+</style>
+
+<body>
+  <div id="agrupar">
+
+  <header id="cabecera">
+      <center><h1>Practica 8</h1></center>
+  </header>
+
+  <nav id="menu">
+    <ul>
+    <li><a href="https://paola200218.github.io/practicas/">Practica 1</a></li>
+    <li><a href="https://paola200218.github.io/practica2/">Practica 2</a></li>
+    <li><a href="https://paola200218.github.io/practica3/">Practica 3</a></li>
+    <li><a href="https://paola200218.github.io/practica4/">Practica 4</a></li>
+    <li><a href="https://paola200218.github.io/practica5/">Practica 5</a></li>
+    <li><a href="https://paola200218.github.io/practica6/">Practica 6</a></li>
+    <li><a href="https://paola200218.github.io/practica7/">Practica 7</a></li>
+    </ul>
+  </nav>
+
+  <section id="seccion">
+      <article><!--Primer articulo-->
+        <header>
+
+          <div align="center"><h1>MI CV</h1> </div>
+
+          <b>Fotograf&iacute;a</b><br><br>
+          <img src="img/foto.jpg" height="230" width="230"><br><br>
+        
+          <b>Video</b><br><br>
+        
+          <video width="350" height="350" controls>
+            <source src="img/mivideo.mp4">
+          </video><br><br>
+        
+          <b>Direcci&oacute;n</b><br><br>
+          
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15086.981427445788!2d-97.01736628195191!3d19.030939328790744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c4e0c4fcd8bdf3%3A0x49a974993eb401f5!2zVG9tYXRsw6FuLCBWZXIu!5e0!3m2!1ses!2smx!4v1676919349524!5m2!1ses!2smx" 
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+          <br><br>
+          <div align="center"><h3><b>Datos</b></h3></div><br>
+        
+          <h2><b>Datos personales</b></h2>
+          <ul style="list-style-type:square">
+            <li>Nombre: <b>Sebastian Garcia Paola</b></li>
+            <li>Fecha de nacimiento: <b>18/junio/2002</b></li>
+            <li>Lugar de nacimiento: <b>Tomatlan, Veracruz</b></li>
+          </ul><br>
+        
+            <h2><b>Formaci&oacute;n acad&eacute;mica</b></h2><br>
+            <ul style="list-style-type:square">
+              <li>2008: <b>Escuela primaria Amado Nervo</b></li>
+              <li>2014: <b>Escuela Telesecundaria Alvaro Galvez y fuentes</b></li>
+              <li>2017: <b>CBTA.99</b></li>
+              <li>2020: <b>Tecnol&oacute;gico Nacional de M&eacute;xico Campus Orizaba</b></li>
+            </ul><br>
+        
+            <h2><b>Experiencia laboral</b></h2><br>
+            <ul style="list-style-type:square">
+    
+              <li> <b>Programador en JavaL</b></li>
+              <li> <b>Programador de App Web</b></li>
+            </ul><br>
+        
+          <footer>
+
+              <p>comentarios (0)</p>
+
+          </footer>
+      </article><!-- Fin Primer articulo-->
+
+      <article><!-- Segundo articulo-->
+  
+  <header>
+
+  <div align="center"><h1>Mis materias</h1> </div>
+
+<body>
+    <div align="center"><h1><l>&nbsp&nbsp&nbsp&nbsp&nbspMis materias preferidas son</l></h1></div>
+    <div id="menu">
+        <br>
+    <l><ol type="1"></l>
+      <li style="color:rgb(6, 131, 131)">Redes de computadoras </li><BR>
+        <li style="color:rgb(84, 13, 214)">Ingles</li><br>
+        <li style="color:rgb(161, 9, 116)">Lenguajes y automatas</li><BR>
+        <li style="color:rgb(206, 12, 12)">Taller de investigacion</li><BR>
+        <li style="color:rgb(33, 124, 10)">Programacion web</li>
+      
+    </ol>
+    </div>
+          </footer>
+    </article> <!-- Fin Segundo articulo-->
+
+</section> <!--Fin de section seccion-->
+
+  <aside id="columna"> <!-- aside -->
+
+      <blockquote><b>Facebook</b></blockquote><br>
+      <a href="https://www.facebook.com/profile.php?id=100006356764412&mibextid=ZbWKwL">
+       <figure>
+         <img src="img/facebook.jpg" height="150" width="150" alt="facebook"><br><br>
+       </figure>
+     </a>
+
+     <blockquote><b>Instagram</b></blockquote><br>
+     <a href="https://instagram.com/paolasebastiian?igshid=ZDdkNTZiNTM=">
+        <figure>
+          <img src="img/instagram.jpg" height="150" width="150" alt="instagram"><br><br>
+        </figure>
+      </a>
+
+      <blockquote><b>Linkendin</b></blockquote><br>
+      <a href="https://www.linkedin.com/">
+        <figure>
+          <img src="img/linkenly.png" height="150" width="150" alt="Linkendin">
+        </figure>
+      </a>
+  </aside> <!-- Fin aside -->
+
+  <footer id="pie">
+      Derechos Reservados &copy; 2010-2011 
+      <address>
+          <a href="http://www.itorizaba.edu.mx">ITO</a>
+      </address>
+  </footer>
+
+</div> <!--fin div agrupar-->
+
+</body>
+</html>
